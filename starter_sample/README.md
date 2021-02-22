@@ -61,7 +61,7 @@
 - 파이썬으로 Azure ML workspace 생성하기 - [참고](https://docs.microsoft.com/azure/machine-learning/how-to-manage-workspace?tabs=python#create-a-workspace)
 
   ```bash
-  # 파일명을 */.env.example* 에서 */.env* 로 변경합니다
+  # 파일명을 /.env.example 에서 /.env 로 변경합니다
   # 이 파일을 열어 SUBSCRIPTION_ID 값을 수정합니다
   $ python -m environment_setup.provisioning.create_workspace
   ```
@@ -118,7 +118,7 @@ Coefficient of determination:  0.19057346847560164
 
   > Azure ML workspace에 모델을 등록
 
-> 기존코드를 Azure ML 용으로 변경할 때, 보통은 *argparse*를 사용하여 매개변수를 다루거나 *Run.get_context()*를 사용하여 로그 코드를 추가하는 것이 대부분입니다. 물론 고급 기능을 위해선 더 해야할 일이 많겠지만요!
+> 기존코드를 Azure ML 용으로 변경할 때, 보통은 *argparse* 를 사용하여 매개변수를 다루거나 *Run.get_context()* 를 사용하여 로그 코드를 추가하는 것이 대부분입니다. 물론 고급 기능을 위해선 더 해야할 일이 많겠지만요!
 
 이제 당신의 로컬환경에서 각 코드가 잘 돌아가는지 테스트해 봅니다.
 
