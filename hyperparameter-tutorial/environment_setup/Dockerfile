@@ -67,3 +67,12 @@ RUN apt-get update \
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
+
+# Install Azure CLI
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+# Setup conda environment
+COPY ./conda_dependencies.yml .
+RUN conda env create --file conda_dependencies.yml
+RUN conda init zsh
+RUN echo "source activate my_conda" >> ~/.zshrc
